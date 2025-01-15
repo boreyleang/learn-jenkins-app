@@ -44,7 +44,9 @@ pipeline {
             }
             steps {
                 sh '''
-                   npm install netlify-cli
+                   npm install -g netlify-cli@latest
+                   npm outdated -g netlify-cli
+                   npm install -g npm-force-resolutions
                    netlify --version
                 '''
             }
