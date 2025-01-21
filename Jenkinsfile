@@ -35,24 +35,24 @@ pipeline {
             }
         }
 
-        stage('Deploy') {
-            agent {
-                docker {
-                    image 'node:18-alpine'
-                    reuseNode true
-                }
-            }
-            steps {
-                sh '''
-                   npm install -g netlify-cli@latest
-                   npm outdated -g netlify-cli
-                   npm install -g npm-force-resolutions
-                   netlify --version
-                '''
-            }
-        }
+    //     stage('Deploy') {
+    //         agent {
+    //             docker {
+    //                 image 'node:18-alpine'
+    //                 reuseNode true
+    //             }
+    //         }
+    //         steps {
+    //             sh '''
+    //                npm install -g netlify-cli@latest
+    //                npm outdated -g netlify-cli
+    //                npm install -g npm-force-resolutions
+    //                netlify --version
+    //             '''
+    //         }
+    //     }
 
-    }
+    // }
 
     // post {
     //     always {
